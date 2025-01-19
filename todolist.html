@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="todolist.css">
+    <title>To do list</title>
+
+</head>
+<body>
+     <div class="body-container">
+
+        <div class="superior-container">
+            <img id="logo"  title="logo" src="https://img.icons8.com/wired/64/list--v1.png" alt="list--v1"/>
+            <i title="Home" class="fa-solid fa-house" id="home"></i></i>
+            <div class="addtask">
+                <input id="add"   type="text" placeholder="Enter a new task..."></imput>
+                <button class="btn-add">ADD TASK</button>   
+            </div> 
+            <div class="findtask">
+                <input id="find" type="text" placeholder="Search for task..."></imput>
+                <button class="btn-find"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+
+        <div class="header-container">
+            <h1>To-Do-List</h1>
+        </div>
+
+        <div class="main-container">
+            <div class="circles">
+                <span class="btn-red"></span>
+                <span class="btn-yellow"></span>
+                <span class="btn-green"></span>
+                <span class="btn-aqua"></span> 
+            </div>
+            
+            <div class="tasks-container">
+                <ul>
+                    <li>Task 1</li>
+                    <li>Task 2</li>
+                    <li>Task 1</li>
+                    <li>Task 2</li>
+                    <li>Task 1</li>
+                    <li>Task 2</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        src ="todolist.js"    
+        </script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+body {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* This container contains all elements in the body */
+
+.body-container {
+    height: 100vh;
+    width: 100%;
+}
+
+/* This is where the top container starts */
+
+.superior-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(235, 235, 235);
+    padding: 30px;
+    width: 100%;
+    height: 10vh;
+    gap: 20px;
+    background-image: url(brownpaper-bg.jpeg);
+}
+.superior-container #logo {
+    font-size: 70px;
+    color: green;
+    margin-right: 70px;
+    
+    
+}
+.superior-container #home {
+    font-size: 40px;
+    width: 10px;
+    margin-right: -5px;  
+}
+
+/* The container below contains a display fkex for two elements I want to have in close proximity without using margin */
+.superior-container .addtask {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    margin-left: 30px;
+}
+.addtask #add {
+    font-size: 15px;
+    font-style: italic;
+    border-radius: 20px;
+    padding: 8px 20px;  
+    }
+.addtask .btn-add {
+    font-size: 10px;
+    font-weight: bolder;
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-color: rgb(47, 182, 255);  
+}
+
+/* The container below contains a display fkex for two elements I want to have in close proximity without using margin */
+.superior-container .findtask {
+    display: flex;
+    gap: 2px;
+    margin-left: 30px;
+
+}
+.findtask #find {
+    font-size: 15px;
+    font-style: italic;
+    border-radius: 20px;
+    padding: 8px 20px;    
+}
+.findtask .btn-find {
+    font-size: 10px;
+    font-weight: bolder;
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-color: rgb(47, 182, 255);  
+}
+
+/* Here is where the "TO-DO-LIST header begins */
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(210, 207, 207);
+    border: 2px solid red;
+    padding: 20px;
+    width: 100%;
+}
+.header-container h1 {
+    font-size: 30px;
+    text-shadow: 1px 1px red, 2px 1px yellow, 5px 2px green, 5px 3px aqua;
+}
+/* The main container begins here  */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 100%;
+    background-image: url(brownpaper-bg.jpeg);
+}
+
+
+.main-container .circles {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: -50px;
+}
+
+.btn-red {
+    background-color: red;
+    padding: 20px;
+    border: 3px solid black;
+    border-radius: 50%;
+}
+.btn-yellow {
+    background-color: yellow;
+    padding: 20px;
+    border: 3px solid black;
+    border-radius: 50%;
+}
+.btn-green {
+    background-color: green;
+    padding: 20px;
+    border: 3px solid black;
+    border-radius: 50%;
+}
+.btn-aqua {
+    background-color: aqua;
+    padding: 20px;
+    border: 3px solid black;
+    border-radius: 50%;
+}
+
+.main-container .tasks-container {
+    background-color: rgb(210, 207, 207);
+    width: 400px;
+    height: 300px;
+    margin-top: 30px;
+    border: 2px ridge grey;
+    box-shadow: 2px 2px 20px 1px ;
+}
