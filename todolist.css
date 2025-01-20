@@ -19,8 +19,9 @@ body {
 
 .superior-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
     width: 100%;
     background-color: rgb(235, 235, 235);
     /* padding: 30px; */
@@ -29,11 +30,15 @@ body {
     /* gap: 20px; */
     background-image: url(brownpaper-bg.jpeg);
 }
-/* .superior-container #logo {
-    margin-right: 50px;
-} */
+.superior-container #logo {
+    box-shadow: 2px 2px 10px 3px;
+    border: 1px groove grey;
+}
 .superior-container #home {
     font-size: 40px;
+    margin-left: 200px;
+    box-shadow: 2px 2px 10px 3px;
+    border: 1px groove grey;
 }
 
 /* The container below contains a display fkex for two elements I want to have in close proximity without using margin */
@@ -44,17 +49,19 @@ body {
     /* margin-left: 30px; */
 }
 .addtask #add {
-    font-size: 15px;
+    font-size: 20px;
     font-style: italic;
     border-radius: 20px;
     padding: 5px;  
 }    
 .addtask .btn-add {
-    font-size: 10px;
+    font-size: 15px;
     font-weight: bolder;
     border-radius: 10px;
-    padding: 5px 10px;
-    background-color: rgb(47, 182, 255);  
+    padding: 5px 5px;
+    background-color: rgb(216, 205, 153);  
+    box-shadow: 2px 2px 10px 3px;
+    border: 1px groove grey;
 }
 
 /* The container below contains a display fkex for two elements I want to have in close proximity without using margin */
@@ -67,17 +74,19 @@ body {
 
 }
 .findtask #find {
-    font-size: 15px;
+    font-size: 20px;
     font-style: italic;
     border-radius: 20px;
     padding: 5px;    
 }
 .findtask .btn-find {
-    font-size: 10px;
+    font-size: 15px;
+    height: 30px;
     font-weight: bolder;
     border-radius: 10px;
-    padding: 5px 10px;
-    background-color: rgb(47, 182, 255);  
+    background-color: rgb(216, 205, 153);  
+    box-shadow: 2px 2px 10px 3px;
+    border: 1px groove grey;
 }
 
 /* Here is where the "TO-DO-LIST header begins */
