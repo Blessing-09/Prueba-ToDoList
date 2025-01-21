@@ -22,16 +22,9 @@ let btnAqua = document.querySelector(".btn-aqua");
 function changeColor(roundBtn,bgColor,textColor) {
     roundBtn.addEventListener('click', function () {
         if (roundBtn) {
-        if (roundBtn === homeIcon) {
-            tasksContainer.style.backgroundColor = bgColor;
-            headerContainer.style.backgroundColor = bgColor;
-            headerContainer.style.color = textColor;
-        }
-        else {
         tasksContainer.style.backgroundColor = bgColor;
         headerContainer.style.backgroundColor = bgColor;
-        headerContainer.style.color = textColor;
-    }
+        headerContainer.style.color = textColor;  
 }
     })
 }
@@ -40,5 +33,5 @@ changeColor(btnYellow, "yellow", "black");
 changeColor(btnGreen, "green", "white");
 changeColor(btnAqua, "aqua", "black");
 changeColor(homeIcon, "rgb(210, 207, 207)", "black");
-
+// TOMORROW TRY ASSIGNING ANOTHER PARAMETER TO HEADCONTAINER
 
