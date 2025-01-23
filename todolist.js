@@ -3,7 +3,7 @@
 let headerContainer = document.querySelector(".header-container");
 let tasksContainer = document.querySelector(".tasks-container");
 let homeIcon = document.querySelector("#home");
-let btnRed = document.querySelector(".btn-red");
+let btnPink = document.querySelector(".btn-pink");
 let btnYellow = document.querySelector(".btn-yellow");
 let btnGreen = document.querySelector(".btn-green");
 let btnAqua = document.querySelector(".btn-aqua");
@@ -28,10 +28,47 @@ function changeColor(roundBtn,bgColor,textColor) {
 }
     })
 }
-changeColor(btnRed, "red", "white");
+changeColor(btnPink, "pink", "white");
 changeColor(btnYellow, "yellow", "black");
 changeColor(btnGreen, "green", "white");
-changeColor(btnAqua, "aqua", "black");
+changeColor(btnAqua, "lightblue", "black");
 changeColor(homeIcon, "rgb(210, 207, 207)", "black");
-// TOMORROW TRY ASSIGNING ANOTHER PARAMETER TO HEADCONTAINER
+// TOMORROW TRY ASSIGNING ANOTHER PARAMETER TO HEADCONTAINER:WORKED!!!
 
+// Called the HTML elements needed to enable the add task button functionality
+let addTask = document.querySelector("#add");
+let btnAdd = document.querySelector(".btn-add");
+
+
+btnAdd.addEventListener('click', function () {
+let taskValue = addTask.value.trim();
+if (taskValue) {
+let newElement = document.createElement("li");
+newElement.textContent = taskValue;
+newElement.classList.add("task");
+
+let trashElement = document.createElement("button");
+trashElement.textContent = "🗑";
+trashElement.classList.add("trash");
+
+newElement.appendChild(trashElement);
+tasksContainer.appendChild(newElement);
+addTask.value = "";
+
+trashElement.addEventListener('click', function () {
+    newElement.remove();
+});
+}
+else { 
+    alert(`🚫Please, enter a valid task‼️`);
+}
+
+});
+
+// Let's call the HTML elements needed for the search task input and its button
+let findInput = document.querySelector("#find");
+let findBtn = document.querySelector(".find-btn");
+
+findBtn.addEventListener('click', () => {
+
+});

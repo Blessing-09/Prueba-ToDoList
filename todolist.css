@@ -63,8 +63,10 @@ body {
     box-shadow: 2px 2px 10px 3px;
     border: 1px groove grey;
 }
-
-/* The container below contains a display fkex for two elements I want to have in close proximity without using margin */
+.btn-add:hover {
+    background-color: rgb(255, 242, 0);
+}
+/* The container below contains a display flex for two elements I want to have in close proximity without using margin */
 
 .superior-container .findtask {
     display: flex;
@@ -88,7 +90,9 @@ body {
     box-shadow: 2px 2px 10px 3px;
     border: 1px groove grey;
 }
-
+.btn-find:hover {
+    background-color: rgb(255, 242, 0);
+}
 /* Here is where the "TO-DO-LIST header begins */
 
 .header-container {
@@ -122,8 +126,8 @@ body {
     margin-top: 40px;
 }
 
-.btn-red {
-    background-color: red;
+.btn-pink {
+    background-color: pink;
     padding: 20px;
     border: 3px solid black;
     border-radius: 50%;
@@ -155,4 +159,20 @@ body {
     border: 2px ridge grey;
     border-radius: 10px;
     box-shadow: 2px 2px 20px 1px ;
+    overflow: scroll;
+}
+
+.trash {
+    float: right;
+    margin-right: 2.5rem;
+    background-color: red;
+}
+ .trash:hover {
+    background-color: black;
+ }
+
+.task {
+    margin-left: 2.5rem;
+    margin-top: 1.2rem;
+    list-style-type: square;
 }
