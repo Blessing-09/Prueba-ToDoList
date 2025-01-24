@@ -43,18 +43,19 @@ let btnAdd = document.querySelector(".btn-add");
 btnAdd.addEventListener('click', function () {
 let taskValue = addTask.value.trim();
 if (taskValue) {
-let newElement = document.createElement("li");
-newElement.textContent = taskValue;
+let newElement = document.createElement("li"); // You can create any HTML element here; I went with "li" because its the most appropriate when creating a list. 
+newElement.textContent = taskValue; // This is where you add the text to the new element, in this case, we want it to be the input entered in the task input element.
 newElement.classList.add("task");
 
 let trashElement = document.createElement("button");
-trashElement.textContent = "🗑";
+trashElement.textContent = "🗑"; // In this case, the textContent added is a trash icon.
 trashElement.classList.add("trash");
 
-newElement.appendChild(trashElement);
-tasksContainer.appendChild(newElement);
-addTask.value = "";
+newElement.appendChild(trashElement); // This is where you add the trash button to the new element.
+tasksContainer.appendChild(newElement); // This is where you add the new element to the tasks container.
+addTask.value = ""; // This is where you clear the input field after adding a new task. If you separate the quote, the input container is empty after entering task.
 
+// Here we want to click the trashElement and it eliminates the task from the list
 trashElement.addEventListener('click', function () {
     newElement.remove();
 });
@@ -67,8 +68,26 @@ else {
 
 // Let's call the HTML elements needed for the search task input and its button
 let findInput = document.querySelector("#find");
-let findBtn = document.querySelector(".find-btn");
+let findBtn = document.querySelector(".btn-find");
 
 findBtn.addEventListener('click', () => {
-
+    let findValue = findInput.value.trim();
+    if (findValue) {
+    let containerItems = tasksContainer.querySelectorAll("li");
+    let matchFound = false;
+    containerItems.forEach((item) => {
+        let text = item.textContent.toLowerCase();
+        if (text.includes(findValue)) {
+            item.style.backgroundColor = "yellow";
+            matchFound = true;
+        }
+        else {
+            item.style.backgroundColor = "";
+        }
+    });
+    }
+    else {
+        alert(`🚫Search is empty‼️`);
+    }
+findInput.value = "";
 });
